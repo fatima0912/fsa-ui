@@ -55,46 +55,46 @@ render() {
                     <ShouldRender cond= {this.state.error}>
                         <Error />
                         </ShouldRender> 
-            <div class= "mb-3">
+            <div className= "mb-3">
                 <h3>Register</h3>
                 <hr/>
                 </div>
-            <div class="mb-3">
-    <label for="fName" class = "form-label">First name</label>
-    <input name="firstName" value={this.state.firstName} onChange={this.onTextChange} type="text" class="form-control" id="fName" />
+            <div className="mb-3">
+    <label htmlFor="fName" class = "form-label">First name</label>
+    <input name="firstName" value={this.state.firstName} onChange={this.onTextChange} type="text" className="form-control" id="fName" />
    <ShouldRender cond ={!this.state.user.firstName}>
-   <span class="text-danger">Required</span>
+   <span className="text-danger">Required</span>
    </ShouldRender>
     <ShouldRender cond={this.state.user.firstName && this.state.user.firstName.length < 3 }> 
-    <span class="text-danger">Min 3 chars</span>
+    <span className="text-danger">Min 3 chars</span>
     </ShouldRender>
     </div>
-    <div class="mb-3">
-    <label for="lName" class = "form-label">last name</label>
-    <input name="lastName" value={this.state.lastName} onChange={this.onTextChange}  type="text" class="form-control" id="lastName" />
+    <div className="mb-3">
+    <label htmlFor="lName" class = "form-label">last name</label>
+    <input name="lastName" value={this.state.lastName} onChange={this.onTextChange}  type="text" className="form-control" id="lastName" />
     <ShouldRender cond={!this.state.user.lastName}>
-        <span class="text-danger">Required</span>
+        <span className="text-danger">Required</span>
     </ShouldRender>
     </div>
-    <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input name="email" value={this.state.email} onChange={this.onTextChange}  type="email" class="form-control" id="email" />
+    <div className="mb-3">
+    <label htmlFor="email" className="form-label">Email</label>
+    <input name="email" value={this.state.email} onChange={this.onTextChange}  type="email" className="form-control" id="email" />
     <ShouldRender cond={!this.state.user.email}>
-        <span class="text-danger">Required</span>
+        <span className="text-danger">Required</span>
     </ShouldRender>
     <ShouldRender cond={this.state.user.email && !this.state.user.email.match( /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)}>
-    <span class="text-danger">Invalid Email</span>
+    <span className="text-danger">Invalid Email</span>
     </ShouldRender>
   </div>
  
-  <div class="mb-3">
-    <label class="form-label" for="pwd">Password</label>
-    <input name="password" value={this.state.password} onChange={this.onTextChange}  type="password" class="form-control" id="pwd" />
+  <div className="mb-3">
+    <label className="form-label" htmlFor="pwd">Password</label>
+    <input name="password" value={this.state.password} onChange={this.onTextChange}  type="password" className="form-control" id="pwd" />
     <ShouldRender cond={!this.state.user.password}>
-        <span class="text-danger">Required</span>
+        <span className="text-danger">Required</span>
     </ShouldRender>
   </div>
-  <div class="mb-3">
+  <div className="mb-3">
       <button onClick ={this.onRegister} disabled = {this.isInvalid()} className="btn btn-danger">Register</button>
 
   </div>

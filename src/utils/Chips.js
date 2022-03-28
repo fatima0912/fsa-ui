@@ -33,8 +33,8 @@ render()
 { return <div>
             <div className="m-3">
                 {this.state.skills.map( 
-               (skills,i) => { return <span className="chip">
-               <span>{skills}</span>
+               (skill,i) => { return <span key = {skill} className="chip">
+               <span>{skill}</span>
                 <i onClick={() => this.onRemove(i)} className="fa fa-close"></i>
                 </span>
                  })}

@@ -71,19 +71,19 @@ class UpdateUser extends Component {
                 <Error />
             </ShouldRender>
             <ShouldRender cond = {this.state.success}>
-               <div class="alert alert-success">Successfully Updated</div>
+               <div className="alert alert-success">Successfully Updated</div>
             </ShouldRender>
             
-            <div class="mb-3">
+            <div className="mb-3">
             <h2> Update User Profile</h2> 
     <label for="fName" class = "form-label">First name</label>
-    <input value={firstName} onChange={this.onValueChange} name="fName" type="text" class="form-control" id="fName" />
+    <input value={firstName} onChange={this.onValueChange} name="fName" type="text" className="form-control" id="fName" />
     </div>
-    <div class="mb-3">
+    <div className="mb-3">
     <label for="lName" class = "form-label">Last name</label>
-    <input name="lName" value={lastName} type="text" onChange={this.onValueChange} class="form-control" id="lName" />
+    <input name="lName" value={lastName} type="text" onChange={this.onValueChange} className="form-control" id="lName" />
     </div>      
-    <div class="mb-3">
+    <div className="mb-3">
     <label for="degree" class = "form-label">Degree</label>
     <select value={degree} onChange={this.onValueChange} name="degree" className="form-control">
         <option value="">--Select--</option>
@@ -93,7 +93,7 @@ class UpdateUser extends Component {
         <option value="3">Others</option>
     </select>
     </div>      
-    <div class="mb-3">
+    <div className="mb-3">
     <label for="qualification" class = "form-label">Qualification</label>
     <select value={qualification} onChange={this.onValueChange} name='qualification' className='form-control'>
     <option value="">--Select--</option>
@@ -102,11 +102,11 @@ class UpdateUser extends Component {
         <option value="2">PG</option>
     </select>
     </div>        
-          <div class=" mb-3">  
-             <label class="form-label">Skills</label>
+          <div className=" mb-3">  
+             <label className="form-label">Skills</label>
               <Chips skills = {skills} onSkillsChange = {this.onSkillsChange} />
           </div>
-          <div class="mb-3">   
+          <div className="mb-3">   
         <button onClick={this.onUpdate} className='btn btn-success btn-sm'>Update</button>
     </div>
     </div>
