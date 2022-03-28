@@ -1,0 +1,14 @@
+.chips{
+    background-color: #000;
+    border-radius: 10px ;
+    border: 1px solid grey;
+    padding: 2px;
+    color: #FFF;
+    margin: 3px;
+}
+
+ .chips i{
+     margin: 2px;
+     cursor: pointer;
+       
+ }

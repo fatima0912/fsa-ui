@@ -17,10 +17,10 @@ const ProductList = ()=>{
             <tbody>
                 {products.map(product => {
                     return <tr>
-                        <td>(product.id)</td>
-                        <td>(product.brand)</td>
-                        <td>(product.model)</td>
-                        <td>(product.price)</td>
+                        <td>{product.id}</td>
+                        <td>{product.brand}</td>
+                        <td>{product.model}</td>
+                        <td>{product.price}</td>
                     </tr>
                 })}
             </tbody>
