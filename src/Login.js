@@ -48,7 +48,7 @@ const Login = () => {
                <h1>Login</h1>
            <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input  onChange={onTextChange}  name="email" type="email" class="form-control" id="email" />
+        <input autoFocus onChange={onTextChange}  name="email" type="email" class="form-control" id="email" />
         </div>
         <div class="mb-3">
         <label for="password" class="form-label">Password</label>

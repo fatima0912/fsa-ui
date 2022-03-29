@@ -61,7 +61,7 @@ render() {
                 </div>
             <div className="mb-3">
     <label htmlFor="fName" class = "form-label">First name</label>
-    <input name="firstName" value={this.state.firstName} onChange={this.onTextChange} type="text" className="form-control" id="fName" />
+    <input autoFocus name="firstName" value={this.state.firstName} onChange={this.onTextChange} type="text" className="form-control" id="fName" />
    <ShouldRender cond ={!this.state.user.firstName}>
    <span className="text-danger">Required</span>
    </ShouldRender>
