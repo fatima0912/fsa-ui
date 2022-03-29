@@ -52,10 +52,11 @@ const logout = () =>{
  
 const isLoggedIn = () =>{
     return !!localStorage.getItem('user');
+}
 
- }
-
-
+const getUserByEmail = (email) => {
+    return axios.get(`/api/users/${email}`,{headers: getHeaders()});
+}
 export default { login, 
                  saveUser,
                  getUsers, 
@@ -64,5 +65,6 @@ export default { login,
                  getUser, 
                  getUserFromStorage,
                  logout,
-                 isLoggedIn
+                 isLoggedIn,
+                 getUserByEmail
                 };

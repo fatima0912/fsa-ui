@@ -11,6 +11,7 @@ import Login from './Login';
 import UpdateUser from './UpdateUser';
 import AutoCounter from './utils/AutoCounter';
 import CounterWithHooks from './utils/CounterWithHooks';
+import UserDetail from './User/UserDetail';
 
 const AppRoutes = () =>
 <BrowserRouter>
@@ -21,6 +22,7 @@ const AppRoutes = () =>
     <Route path ='/Contact' element ={<Contact/>} />
     <Route path ='/users' element ={<UserList/>} />
     <Route path ='/users/update' element ={<UpdateUser/>} />
+    <Route path ='/users/:email' element ={<UserDetail/>} />
     <Route path ='/CounterWithHooks' element ={<CounterWithHooks />} />
  {/*<Route path ='*' element ={<Home/>} />
  <Route path = "*" element= {<NotFound />} />*/}
