@@ -16,13 +16,14 @@ const Login = () => {
         setUser( newUser );
     }
 
-    const onLogin = async () =>{
+    const onLogin = async (evt) =>{
+        evt.preventDefault();
         try{
             const res= await userService.login(user);
             const userInfo = res.data;
             // console.log(userInfo);
             userService.saveUser(userInfo);
-            setLogIn(true);
+            setLogIn(true); 
 
             if(userInfo.role === 0)
             navigate('/users/update');
@@ -43,6 +44,7 @@ const Login = () => {
                    Wrong username or password
                </div>
                </ShouldRender> 
+               <form onSubmit={onLogin}>
                <h1>Login</h1>
            <div class="mb-3">
         <label for="email" class="form-label">Email</label>
@@ -53,7 +55,8 @@ const Login = () => {
         <input onChange={onTextChange} name="password" type="password" class="form-control" id="password" />
         </div>
         <div class="mb-3">
-            <button  onClick={onLogin} class="btn btn-primary">Login</button></div>
+            <button type = "submit" class="btn btn-primary">Login</button></div>
+        </form>
         </div>
     }
 
