@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import userService from "../Services/userService";
 import User from "../User/User";
-const UserDetail =() =>{
+const UserDetail =() =>{   //its working without props here
     const [user, setUser] = useState({});
     const params = useParams();
     useEffect( async() => {
